@@ -1,7 +1,8 @@
 // this is layout you can use this in those page you want
+"use client";
 import React from "react";
-import Stack from "@mui/material/Stack";
-
+import { Stack } from "../lib/mui";
+import theme from "../../theme";
 interface Iprops {
   children: React.ReactNode;
 }

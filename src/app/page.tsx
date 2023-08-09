@@ -1,13 +1,19 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Typography } from "@mui/material";
-import MainLayout from "./Layout/MainLayout";
-import Stack from "@mui/material/Stack";
+"use client";
+import { Typography } from "../lib/mui";
+import MainLayout from "../Layout/MainLayout";
+import { Stack } from "../lib/mui";
+import Button from "@/components/Button";
+import theme from "../../theme";
 
 export default function Home() {
+  console.log("hey seafawe");
   return (
     <MainLayout>
-      <Stack>hey this is test</Stack>
+      <Stack>
+        <Button size="sm">
+          <Typography>hey</Typography>
+        </Button>
+      </Stack>
     </MainLayout>
   );
 }
