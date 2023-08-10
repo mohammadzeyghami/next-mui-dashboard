@@ -15,18 +15,30 @@ const theme = createTheme({
       color: "#FFFFF8",
       fontWeight: 400,
     },
+    h3: {
+      font: "Inter",
+      fontSize: "25px",
+      fontWeight: 700,
+    },
+    h5: {
+      font: "Inter",
+      fontSize: "19px",
+      fontWeight: 700,
+    },
   },
   palette: {
     background: {
       white: "#fff",
       main: "#F5F6F8",
       secoundary: "#FFFFF8",
+      gray: "#9697A2",
     },
     common: {
       brown: "#EADCD5",
-      blue: "#D6E4EC",
+      blue: "#2644D5",
       lightBrown: "#EADCD5",
       purple: "#D9D3E8",
+      gray: "#E9E9E9",
     },
   },
 });
@@ -38,6 +50,7 @@ declare module "@mui/material/styles" {
     white: string;
     main: string;
     secoundary: string;
+    gray: string;
   }
 }
 declare module "@mui/material/styles/createPalette" {
@@ -46,5 +59,6 @@ declare module "@mui/material/styles/createPalette" {
     lightBrown: string;
     blue: string;
     purple: string;
+    gray: string;
   }
 }
