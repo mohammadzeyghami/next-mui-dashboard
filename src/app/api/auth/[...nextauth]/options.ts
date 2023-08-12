@@ -1,18 +1,28 @@
 import type { NextAuthOptions } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { GithubProfile } from "next-auth/providers/github";
 
 export const options: NextAuthOptions = {
   providers: [
     GitHubProvider({
+      profile(profile: GithubProfile) {
+        // console.log(profile);
+        return {
+          ...profile,
+          role: profile.role ?? "user",
+          id: profile.id.toString(),
+          image: profile.avatar_url,
+        };
+      },
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
     }),
     CredentialsProvider({
-      name: "Creadentials",
+      name: "Credentials",
       credentials: {
         username: {
-          label: "UserName",
+          label: "Username:",
           type: "text",
           placeholder: "your-cool-username",
         },
@@ -26,7 +36,12 @@ export const options: NextAuthOptions = {
         // This is where you need to retrieve user data
         // to verify with credentials
         // Docs: https://next-auth.js.org/configuration/providers/credentials
-        const user = { id: "24", name: "Mohammad", password: "nextauth" };
+        const user = {
+          id: "24",
+          name: "mohammad",
+          password: "nextauth",
+          role: "admin",
+        };
 
         if (
           credentials?.username === user.name &&
