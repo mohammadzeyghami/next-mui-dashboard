@@ -3,6 +3,7 @@ import { ThemeProvider } from "@emotion/react";
 import "./globals.css";
 import type { Metadata } from "next";
 import theme from "../../theme";
+import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <SessionProvider>
+          <ThemeProvider theme={theme}> {children}</ThemeProvider>
+        </SessionProvider>
       </body>
     </html>
   );
