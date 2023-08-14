@@ -5,7 +5,7 @@ import {
   IdeaIcon,
   VectorIcon,
 } from "@/assets/icons/svgs/Icons";
-import { Stack, Typography } from "@mui/material";
+import { Icon, Stack, Typography } from "@mui/material";
 import React from "react";
 import theme from "../../theme";
 import Link from "next/link";
@@ -16,6 +16,16 @@ interface Iprops {
 
 const Sidebar = ({ Page }: Iprops) => {
   const [active, setActive] = useState<string>(Page);
+  const sidebarItems = [
+    {
+      name: "Home",
+      Icon: HomeIcon,
+    },
+    {
+      name: "Home",
+      Icon: HomeIcon,
+    },
+  ];
 
   return (
     <Stack
@@ -28,6 +38,7 @@ const Sidebar = ({ Page }: Iprops) => {
         <IdeaIcon color={theme.palette.common.blue} fontSize={"28px"} />{" "}
         <Typography variant="h3">Idea Dashboard</Typography>
       </Stack>
+
       <Stack mt={"74px"}>
         <Link style={{ textDecoration: "none", width: "80%" }} href={"/"}>
           <Stack

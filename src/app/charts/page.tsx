@@ -60,7 +60,7 @@ const data = [
 const page = () => {
   return (
     <MainLayout Page="charts">
-      <Stack sx={{ width: "100%", height: "100%" }}>
+      <Stack sx={{ width: "100%", height: "100%", mt: "50px" }}>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             width={500}

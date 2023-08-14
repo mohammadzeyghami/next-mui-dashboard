@@ -14,7 +14,7 @@ const UserTable = () => {
       sx={{
         height: "100%",
         width: "100%",
-        mt: "70px",
+        mt: "50px",
       }}
     >
       <MUIDataTable
