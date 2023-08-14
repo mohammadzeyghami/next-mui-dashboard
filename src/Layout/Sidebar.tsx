@@ -171,6 +171,38 @@ const Sidebar = ({ Page }: Iprops) => {
             </Typography>
           </Stack>
         </Link>
+        <Link style={{ textDecoration: "none", width: "80%" }} href={"/charts"}>
+          <Stack
+            flexDirection={"row"}
+            alignItems={"center"}
+            gap={2}
+            mb={"30px"}
+            sx={{
+              py: "10px",
+              bgcolor: active === "charts" ? theme.palette.common.gray : "#fff",
+              borderRadius: "10px",
+            }}
+          >
+            <IdeaIcon
+              color={
+                active === "charts"
+                  ? theme.palette.common.blue
+                  : theme.palette.background.gray
+              }
+            />
+
+            <Typography
+              color={
+                active === "charts"
+                  ? theme.palette.common.blue
+                  : theme.palette.background.gray
+              }
+              variant="h5"
+            >
+              Charts
+            </Typography>
+          </Stack>
+        </Link>
       </Stack>
     </Stack>
   );
