@@ -1,3 +1,4 @@
+"use client";
 import { NotificationIcon } from "@/assets/icons/svgs/Icons";
 import { Box, Stack, Typography } from "@mui/material";
 import { signIn, signOut, useSession } from "next-auth/react";
@@ -8,7 +9,7 @@ import React from "react";
 
 const Navbar = () => {
   const { status, data } = useSession();
-  console.log(useSession());
+
   const session = status === "authenticated";
 
   return (

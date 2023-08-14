@@ -20,6 +20,7 @@
     "@types/react-dom": "18.2.7",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.13",
+    "mui-datatables": "^4.3.0",
     "next": "13.4.13",
     "next-auth": "^4.23.0",
     "react": "18.2.0",
@@ -36,6 +37,8 @@
     "@storybook/nextjs": "^7.2.1",
     "@storybook/react": "^7.2.1",
     "@storybook/testing-library": "^0.2.0",
+    "@types/mui-datatables": "^4.3.5",
+    "@types/react-table": "^7.7.14",
     "eslint-plugin-storybook": "^0.6.13",
     "storybook": "^7.2.1"
   }

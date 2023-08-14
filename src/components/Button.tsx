@@ -5,7 +5,6 @@ interface Iprops {
   children?: React.ReactNode;
 }
 const Button = ({ size = "sm", children }: Iprops) => {
-  console.log("hey");
   return (
     <Stack
       justifyContent={"center"}
